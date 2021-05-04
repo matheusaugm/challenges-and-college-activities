@@ -1,0 +1,312 @@
+/*-------Header Início ------- */
+.header {
+  background: black;
+  border-radius: 60px;
+  margin-bottom: 20px;
+}
+header, main, footer
+{
+    min-width: 100%;
+}
+.navbar{
+    background: black;
+    border-radius: 60px;
+    position: fixed;
+    
+}
+
+.logo{
+    max-width: 150px;
+}
+
+.btn-outline-success {
+    color: #bb1e1e;
+    border-color: #bb1e1e;
+    
+}
+.btn:hover{
+    background-color: #bb1e1e;
+    border-color:#bb1e1e;
+}
+.header nav a {
+  background-color: rgb(59, 59, 59);
+  border-radius: 10px;
+  
+}
+
+.active{
+    background-color: rgb(59, 1, 1)  ;
+} 
+.header nav a:hover{
+    background-color: rgb(231, 121, 121);
+}
+.d-flex{
+    /*
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    padding-right: 100px;
+    padding-top: 35px;
+    */
+}
+/*-------Header Fim ------- */
+
+/*-------Main Início ------- */
+.body {
+    position: relative;
+  }
+.main{
+    background: rgb(196, 196, 196);
+    padding-top: 100px;
+}
+.lancamento_h1{
+    color: white;
+}
+.carousel{
+    background: black;
+    padding: 10px;
+    margin-bottom: 10px;
+   
+}
+.texto_carousel{
+    float: right;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+.titulos{
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin-bottom: 0px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+.video{
+    padding: 20px;
+    background-color: black;
+    border-radius: 20px;
+    margin-top:5px
+}
+.detalhesdofilme{
+    float: left;
+    padding: 10px;
+}
+/* Avaliação por estrelas*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:black;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: white;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: white;      
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: white;    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rated {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+.rated:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rated:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:gray;
+}
+.rated:not(:checked) > label:before {
+    content: '★ ';
+}
+.rated > input:checked ~ label {
+    color: white;    
+}
+.rated:not(:checked) > label:hover,
+.rated:not(:checked) > label:hover ~ label {
+    color: white;      
+}
+.rated > input:checked + label:hover,
+.rated > input:checked + label:hover ~ label,
+.rated > input:checked ~ label:hover,
+.rated > input:checked ~ label:hover ~ label,
+.rated > label:hover ~ input:checked ~ label {
+    color: white;    
+}
+/*Fim da avaliação */
+.btn-danger {
+    color: #fff;
+    background-color: rgb(59, 1, 1);
+    border-color: rgb(59, 1, 1);
+    bottom: 0;
+    right: 0;
+    float: right;
+    margin: 10px;
+   
+}
+.destaquesimg{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 50px;
+    
+}
+
+.btncategoria{
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    background-color: rgb(59, 1, 1);
+    border-color: rgb(59, 1, 1);
+}
+.avatar
+{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+     margin-right: 30px;
+}
+.card{
+    background-color: black;
+}
+
+.card-body{
+    background-color: black;
+    color: white;
+   
+}
+.card-title{
+    background-color: rgb(59, 1, 1);
+    border-radius: 30px;
+}
+.videocard{
+    padding: 10px;
+    background-color: black;
+    
+    margin-top:5px
+}
+
+.novidadesimg{
+    min-width: 100px;
+    max-width: 300px;
+    float: left;
+    margin-right: 10px;
+}
+
+.rounded-pill{
+   background-color:  rgb(59, 1, 1)  !important    ;
+}
+.tags{
+    margin-left: 45px;
+}
+.sobretext{
+    background-color: rgb(59, 1, 1);
+    color:white;
+    padding: 10px;
+}
+.novidades_text1{
+    background-color: black;
+    color:white;
+   
+}
+.novidades_text2{
+    background-color: rgb(59, 1, 1);
+    
+    
+}
+.editorial_background{
+    background-color: rgb(59, 1, 1);
+    color: white;
+}
+.minifooter{
+background-color: black;
+margin-top: -20px;
+margin-bottom: 10px;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;}
+.minifooter2{
+background-color: black;
+
+margin-bottom: 10px;
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+}
+.redes_sociais{
+    margin-bottom: 5%;
+    text-align: center;
+}
+.redes_sociais .fab{
+    margin: 0 5%;
+    color: white;
+}
+.redes{
+    background-color:rgb(59, 1, 1);
+}
+/*-------Main Fim ------- */
+
+/*-------Footer Início ------- */
+.footer{ 
+    background-color: black;
+    color: white;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    
+ 
+    
+}
+.footer_area{
+    padding: 10px;
+    text-align: center;
+}
+.logobottom{
+    position:relative;
+  left:20% ;
+  width: 75px;
+    
+
+}

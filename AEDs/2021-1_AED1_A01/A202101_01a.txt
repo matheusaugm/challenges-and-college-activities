@@ -1,0 +1,136 @@
+Pontifícia Universidade Católica de Minas Gerais
+Instituto de Ciências Exatas e Informática
+Curso de Ciência da Computação
+Disciplina: Algoritmos e Estruturas de Dados I
+
+Atividade avaliativa 01
+
+Matrícula:6852103
+Nome     :Matheus Augusto Moreira
+
+Instruções gerais
+
+- Desenvolver soluções para cada um dos enunciados abaixo,
+  segundo o modelo de programa no arquivo A202101_01a.c anexo.
+- Os valores usados para testes poderão ser informados no
+  arquivo com formato texto (editável) inputs_001.txt, com
+  um valor apenas em cada linha.
+- Os resultados produzidos poderão ser guardados no arquivo
+  com formato texto outputs_001.txt, conforme modelo anexo.
+- É permitida a consulta ao material disponível.
+- As soluções entregues serão verificadas e poderão ser
+  desconsideradas caso houver indicações de similaridade.  
+- O tempo previsto para cada questão é de 30 minutos.
+  Um tempo adicional de mais 30 minutos será oferecido
+  em atendimento às solicitações apresentadas pelo NAI.
+- A entrega do exercício deverá ser feita pelo CANVAS.
+
+Testes
+- Para compilar 
+       
+       mk A202101 inputs.txt output.txt
+       
+- Os valores usados para testes poderão ser informados no
+  arquivo com formato texto (editável) input00.txt, com
+  um valor apenas em cada linha.
+- Os resultados produzidos poderão ser guardados no arquivo
+  com formato texto output00.txt, conforme modelo anexo.
+- Outros arquivos com mais entradas ou saídas poderão ser
+  enviados poderão ser usados, alterando a numeração (xx).
+  
+Enunciados
+
+01.) Questão
+Os fundadores da Escola de Hogwarts e das quatro grandes casas,
+Godrico Gryffindor (Grifinória), Helga Hufflepuff (Lufa-Lufa), 
+Rowena Ravenclaw (Corvinal) e Salazar Slytherin (Sonserina)
+projetaram o Chapéu Seletor para designar os alunos a uma das
+casas. Entretanto, o algoritmo do artefato era imperfeito.
+Para ajudar no aperfeiçoamento do seu algoritmo será necessário
+atualizá-lo para uma versão digital com melhor seleção.
+Cada aluno será avaliado segundo diversos itens: 
+coragem, prudência, dedicação, modéstia, inteligência, atenção,
+perseverança e competição dentre outros. 
+Essa avaliação resultará em um valor entre 0.1 e 0.9.
+Cada casa estará associada a um intervalo a saber:
+Corvinal   [0.7:0.9]
+Grifinória [0.5:0.8]
+Lufa-Lufa  [0.2:0.5]
+Sonserina  [0.1:0.4]
+Sua contribuição para aperfeiçoar esse algoritmo será
+definir uma função para receber o indicador de um 
+candidato e designar, com maior precisão, a qual casa 
+deverá ser designado o aluno. 
+Caso houver mais do que uma indicação de casa para o
+candidato, ele deverá ser designado para a casa cujo
+nome em ordem alfabética vier primeiro, se seu índice
+for maior que o limite inferior que essa.
+OBS.: Índices fora do intervalo deverão ser tratados
+      como erro e parar o processo de indicação.
+
+Exemplos:
+ 0.85 -> Corvinal
+ 0.63 -> Grifinória
+ 0.39 -> Lufa-Lufa
+ 0.18 -> Sonserina
+
+02.) Questão
+Alguns números apresentam uma propriedade singular relativa
+ao quadrado de suas partes, como mostrado abaixo
+
+            parte1 meio parte2    2    2          2
+    30125 -> (30)    1   (25) = 30 + 25  = (30+25)  = 3025
+
+Deseja-se saber quantos valores não múltiplos de 3,
+entre 10000 e 100000 possuem essa característica, 
+bem como terem a primeira parte menor que a segunda 
+e o número do meio par.
+
+03.) Questão
+Definir uma função para contar as vogais minúsculas
+em uma cadeia de caracteres.
+Dadas duas cadeias de caracteres, dizer qual contém a maior
+quantidade de vogais minúsculas.
+
+Exemplos:
+    abacate ? abacaxi   : 4 = 4 => ""
+    melao   ? melancia  : 3 < 4 => "melancia"
+    banana  ? caju      : 3 > 2 => "banana"
+
+04.) Questão
+CORRIGIR o programa abaixo para produzir respostas corretas 
+para a seguinte questão:
+
+É possível a função f (x,y) parar em até (x) iterações 
+produzindo uma diferença menor que (y) ?
+
+#include <stdio.h>
+#include <stdlib.h>
+
+ bool f ( int x, double y )
+ {  
+    double soma = 0.0;
+    int    k = 2,  d = 1;
+    while ( 2-soma>=y )
+    { 
+      soma = soma + 1/d;
+      d = d + k;  k = k + 1; x = x - 1;
+    }
+    if ( x < 0 )
+    {  printf ( "\nLimite estourado!!!\n" );  }
+    return ( 2.0-soma<y );
+  }	  
+  
+  void questao01 ( void )
+  {
+   int    x = 0;
+   double y = 0.0;
+   scanf  ( "%d" , &x );
+   scanf  ( "%d", &y );
+   printf ( "\n%d -> %lf = %d", x, y, f (x,y) );
+ }
+
+Exemplos:
+ 10->0.5 = 1 (true = CERTO) 
+ 10->0.1 = 1 (true = ERRADO !!!)
+ 10->0.00001 = ??? (loop???)
